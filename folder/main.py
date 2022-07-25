@@ -2,7 +2,7 @@ import discord, os ,pytz, asyncio, json
 from discord.ext import tasks, commands
 import keep_alive
 
-keep_alive.keep_alive()
+
 token = os.environ['Token']
 
 
@@ -24,5 +24,6 @@ async def on_connect():
   bot.loop.create_task(status_task())
   #await bot.change_presence(activity = discord.Streaming(name ="wtv you want", url = "twitch or yt"))
 
-  
+    
+keep_alive.keep_alive()  
 bot.run(token, bot=False)
